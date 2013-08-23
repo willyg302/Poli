@@ -73,10 +73,8 @@ public class TileAdapter extends BaseAdapter {
         try {
             convertView.setLayoutParams(new GridView.LayoutParams(mCellWidth, mCellHeight));
             JSONObject json = new JSONObject(data);
-            aq.id(R.id.image).image(json.getString("img"));
-            aq.id(R.id.image).tag(Integer.valueOf(position));
-            aq.id(R.id.title).text(json.getString("title"));
-            aq.id(R.id.title).tag(Integer.valueOf(position));
+            aq.id(R.id.image).image(json.getString("img")).tag(Integer.valueOf(position));
+            aq.id(R.id.title).text(json.getString("title")).textSize(8f).tag(Integer.valueOf(position));
         } catch (JSONException ex) {
             //
         }

@@ -83,7 +83,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int actionbar_compat_item_refresh=0x7f070003;
         public static final int actionbar_compat_item_refresh_progress=0x7f070002;
         public static final int actionbar_compat_title=0x7f070001;
-        public static final int body=0x7f07000d;
         public static final int gridview=0x7f070009;
         public static final int image=0x7f07000b;
         public static final int menu_refresh=0x7f070004;
@@ -93,6 +92,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int slideHolder=0x7f070005;
         public static final int text=0x7f070008;
         public static final int title=0x7f07000c;
+        public static final int web_engine=0x7f07000d;
     }
     public static final class integer {
         public static final int grid_num_cols=0x7f050001;
@@ -102,8 +102,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int demo_pager=0x7f030000;
         public static final int demo_pager_grid=0x7f030001;
         public static final int demo_pager_grid_item=0x7f030002;
-        public static final int demo_topic=0x7f030003;
-        public static final int sidebar_button=0x7f030004;
+        public static final int sidebar_button=0x7f030003;
+        public static final int source_view=0x7f030004;
     }
     public static final class string {
         public static final int app_name=0x7f080000;
@@ -117,13 +117,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int btn_search=0x7f080005;
         public static final int btn_stats=0x7f080009;
         public static final int btn_whos_who=0x7f08000a;
-        public static final int no_items=0x7f08000e;
+        public static final int no_items=0x7f08000d;
         public static final int pg_favorites=0x7f080003;
         public static final int pg_search=0x7f080002;
         /**  Page titles (in our pager) 
          */
         public static final int pg_untitled=0x7f080001;
-        public static final int sample_topic_text=0x7f08000d;
         /**  Miscellaneous (the sample ones may be removed) 
          */
         public static final int sample_topic_title=0x7f08000c;

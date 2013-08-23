@@ -13,8 +13,8 @@ C:\Users\William Gaul\Documents\NetBeansProjects\Poli\res\drawable-xhdpi\ic_laun
 C:\Users\William Gaul\Documents\NetBeansProjects\Poli\res\layout\demo_pager.xml \
 C:\Users\William Gaul\Documents\NetBeansProjects\Poli\res\layout\demo_pager_grid.xml \
 C:\Users\William Gaul\Documents\NetBeansProjects\Poli\res\layout\demo_pager_grid_item.xml \
-C:\Users\William Gaul\Documents\NetBeansProjects\Poli\res\layout\demo_topic.xml \
 C:\Users\William Gaul\Documents\NetBeansProjects\Poli\res\layout\sidebar_button.xml \
+C:\Users\William Gaul\Documents\NetBeansProjects\Poli\res\layout\source_view.xml \
 C:\Users\William Gaul\Documents\NetBeansProjects\Poli\res\values\attrs.xml \
 C:\Users\William Gaul\Documents\NetBeansProjects\Poli\res\values\colors.xml \
 C:\Users\William Gaul\Documents\NetBeansProjects\Poli\res\values\dimens.xml \

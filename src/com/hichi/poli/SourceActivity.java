@@ -5,15 +5,14 @@ package com.hichi.poli;
  * Originally licensed under the Apache License, Version 2.0:
  * http://www.apache.org/licenses/LICENSE-2.0
  */
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import com.androidquery.AQuery;
 import com.hichi.poli.data.TileContentProvider;
 import com.hichi.poli.data.TileTable;
@@ -21,29 +20,23 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * An activity that shows a single tile, with functionality that supports
- * touching the tile (opens extended view).
+ * Displays an extended view of a tile. This is generally its URL source in
+ * an embedded WebView, but may later be configured based on the media.
  * 
  * @author William Gaul
  */
-public class TileActivity extends FragmentActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class SourceActivity extends FragmentActivity implements LoaderManager.LoaderCallbacks<Cursor> {
     
     private int key;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.demo_pager_grid_item);
+        setContentView(R.layout.source_view);
         key = getIntent().getIntExtra("key", 1);
         
         // Load the tile information from the DB via the tile's ID (key)
         this.getSupportLoaderManager().initLoader(0, null, this);
-    }
-
-    public void showTopic() {
-        Intent intent = new Intent(this.getApplicationContext(), SourceActivity.class);
-        intent.putExtra("key", key);
-        startActivity(intent);
     }
 
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
@@ -58,21 +51,11 @@ public class TileActivity extends FragmentActivity implements LoaderManager.Load
         AQuery aq = new AQuery(this);
         try {
             JSONObject json = new JSONObject(data);
-            aq.id(R.id.title)
-                    .text(json.getString("title"))
-                    .clicked(new OnClickListener() {
-                public void onClick(View view) {
-                    showTopic();
-                }
-            });
-            aq.id(R.id.image)
-                    .background(R.color.background_grid1_cell)
-                    .image(json.getString("img"))
-                    .clicked(new OnClickListener() {
-                public void onClick(View view) {
-                    showTopic();
-                }
-            });
+            WebView engine = aq.id(R.id.web_engine).getWebView();
+            // This next line is IMPORTANT, otherwise URLs are directed to the browser app
+            engine.setWebViewClient(new WebViewClient());
+            engine.getSettings().setJavaScriptEnabled(true);
+            engine.loadUrl(json.getString("src"));
         } catch (JSONException ex) {
             //
         }

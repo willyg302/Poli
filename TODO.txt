@@ -1,0 +1,6 @@
+Image loader animation while images are being fetched
+Show bookmarked status somehow (star in corner, etc.)
+Begin working on data and layout for various types of tiles (FB, YT, etc.)
+Swap out to parrot icon
+
+Upgrade DB info to reflect data/layout changes (above)

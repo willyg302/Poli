@@ -6,6 +6,7 @@ package com.hichi.grid;
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -23,6 +24,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Toast;
 import com.hichi.poli.R;
 import com.hichi.poli.TileActivity;
 import com.hichi.poli.data.Tile;
@@ -88,11 +91,16 @@ public class GridFragment extends Fragment implements LoaderManager.LoaderCallba
         } else {
             // Connect the gridview with an adapter that fills up the space.
             mGridView.setAdapter(new TileAdapter(a, cellWidth, cellHeight));
+            mGridView.setOnItemClickListener(new OnItemClickListener() {
+                public void onItemClick(AdapterView<?> av, View view, int i, long l) {
+                    showTopic(i);
+                }
+            });
 
             // Arrange it so a long click on an item in the grid shows the topic associated with the image.
             mGridView.setOnItemLongClickListener(new OnItemLongClickListener() {
-                public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
-                    showTopic(position);
+                public boolean onItemLongClick(AdapterView<?> av, View view, int i, long l) {
+                    bookmark(i);
                     return true;
                 }
             });
@@ -138,19 +146,33 @@ public class GridFragment extends Fragment implements LoaderManager.LoaderCallba
     }
 
     /**
-     * Start a GridImageActivity to display the topic of the given index.
+     * Start a TileActivity to display the tile of the given index.
      */
-    public void showTopic(int index) {
+    private void showTopic(int index) {
         Tile topic = (Tile) ((TileAdapter) mGridView.getAdapter()).getItem(index);
         Intent intent = new Intent(getActivity().getApplicationContext(), TileActivity.class);
         intent.putExtra("key", topic.getID());
         startActivity(intent);
-        // @TODO: This + DB
-        //Toast.makeText(getActivity(), "" + tileArray.get(index).getTitle(), Toast.LENGTH_SHORT).show();
-        //Intent intent = new Intent(getActivity().getApplicationContext(), TileActivity.class);
-        
-        //intent.putExtra("key", tileArray.get(index).getTitle());
-        //startActivity(intent);
+    }
+    
+    /**
+     * When the tile of the given index is long-clicked on the home page, we
+     * consider that a "bookmark" action. The tile will then appear in the
+     * favorites page.
+     * 
+     * When the tile is long-clicked on the favorites page, it is removed.
+     */
+    private void bookmark(int index) {
+        Tile topic = (Tile) ((TileAdapter) mGridView.getAdapter()).getItem(index);
+        ContentValues values = new ContentValues();
+        boolean bookmark = (pageNum == 1);
+        values.put(TileTable.COLUMN_BOOKMARKED, bookmark);
+        this.getActivity().getContentResolver().update(
+                TileContentProvider.CONTENT_URI.buildUpon().appendPath(Integer.toString(topic.getID())).build(),
+                values, null, null);
+        Toast.makeText(this.getActivity().getApplicationContext(),
+                "Tile has been " + (bookmark ? "added to" : "removed from") + " favorites",
+                Toast.LENGTH_SHORT).show();
     }
 
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
@@ -163,6 +185,12 @@ public class GridFragment extends Fragment implements LoaderManager.LoaderCallba
                         null, null, null);
             case 2:
                 // Bookmarks
+                return new CursorLoader(getActivity(),
+                        TileContentProvider.CONTENT_URI,
+                        TileTable.getProjectableSchema(),
+                        TileTable.COLUMN_BOOKMARKED + "!=?",
+                        new String[] {"0"},
+                        null);
             default:
                 return null;
         }
