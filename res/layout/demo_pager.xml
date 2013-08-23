@@ -1,0 +1,20 @@
+<com.agimind.widget.SlideHolder xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:orientation="vertical"
+                                android:id="@+id/slideHolder"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+    
+    <!-- Represents sidebar -->
+    <LinearLayout android:id="@+id/sidebar"
+                  android:layout_width="96dp"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:background="@color/background_grid1_cell">
+        <!--We add all the sidebar buttons in code, because it's easier! See MainActivity.java-->
+    </LinearLayout>
+    
+    <!-- Main view -->
+    <android.support.v4.view.ViewPager android:id="@+id/pager"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"/>
+</com.agimind.widget.SlideHolder>

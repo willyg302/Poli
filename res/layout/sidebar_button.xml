@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="@dimen/sidebar_button"
+             android:layout_height="@dimen/sidebar_button"
+             android:scaleType="centerInside"
+             android:adjustViewBounds="true"
+             android:layout_gravity="center"
+             android:contentDescription="@string/btn_generic" />

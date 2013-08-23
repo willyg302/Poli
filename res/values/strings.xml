@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Poli</string>
+    
+    <!-- Page titles (in our pager) -->
+    <string name="pg_untitled">Untitled</string>
+    <string name="pg_search">Search Results</string>
+    <string name="pg_favorites">My Favorites</string>
+
+    <!-- Sidebar buttons -->
+    <string name="btn_generic">Button</string>
+    <string name="btn_search">Search</string>
+    <string name="btn_my_elections">My Elections</string>
+    <string name="btn_mock_vote">Mock Vote</string>
+    <string name="btn_compare">Compare</string>
+    <string name="btn_stats">Stats</string>
+    <string name="btn_whos_who">Who\'s Who</string>
+    <string name="btn_home">Home</string>
+    
+    <!-- Miscellaneous (the sample ones may be removed) -->
+    <string name="sample_topic_title">Sample Topic</string>
+    <string name="sample_topic_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a accumsan erat. Cras sollicitudin, purus eget ultrices pretium, mi leo suscipit enim, nec lacinia est nisl vel ipsum. Nullam auctor lobortis scelerisque. Sed laoreet ornare sodales. Proin consectetur lacus sem. Integer leo massa, venenatis ac auctor iaculis, ultricies in dolor. Nulla at nunc sapien. Vivamus eget dolor eros, dapibus scelerisque nisl. Praesent malesuada porttitor nisl, vitae pellentesque felis tempus quis. Maecenas felis nibh, aliquet ut vestibulum non, consectetur nec nibh. Maecenas pretium augue id lorem venenatis et euismod lectus varius. Fusce mollis erat elementum purus mattis ut cursus mauris iaculis. Sed vestibulum lectus quis lectus rutrum ac tempus risus rhoncus. Maecenas vel justo felis.</string>
+    <string name="no_items">No items</string>
+</resources>

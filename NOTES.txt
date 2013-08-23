@@ -1,0 +1,16 @@
+To start the emulator: navigate to SDK Tools directory, run "android avd"
+To start debugger: navigate to SDK Tools directory, run "ddms"
+
+To start SQLite shell:
+	Navigate to SDK platform-tools directory, run "adb shell"
+	"cd data"
+	"cd data"
+	"cd com.hichi.androidapp2" (or the app name, whatever it is)
+	run "sqlite3 tablenamehere.db"
+
+Sometimes the emulator drops and is not recognized by DDMS or Netbeans. To restart:
+	Navigate to SDK platform-tools directory
+	"adb kill-server"
+	"adb start-server"
+
+It also helps to wipe user data when stuff starts to go wrong (when starting emulator through AVD)

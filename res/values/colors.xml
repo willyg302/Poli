@@ -1,0 +1,8 @@
+<resources>
+    <color name="actionbar_title_color">#FF553355</color>
+    <color name="actionbar_title_color_old">#FF224894</color>
+    <color name="background_grid1">#FFFFFFFF</color><!--ffeeeeee-->
+    <color name="background_grid1_cell">#33AAAAAA</color>
+    <color name="topic_title_text">#FF0000BB</color>
+    <color name="topic_text">#ffdddddd</color>
+</resources>
