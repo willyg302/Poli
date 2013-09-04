@@ -4,3 +4,5 @@ Begin working on data and layout for various types of tiles (FB, YT, etc.)
 Swap out to parrot icon
 
 Upgrade DB info to reflect data/layout changes (above)
+
+Logging things like user clicks on what and what order
