@@ -25,26 +25,16 @@ public class GridAdapter extends FragmentStatePagerAdapter {
     public GridAdapter(FragmentManager fm, Resources res) {
         super(fm);
     }
-
-    /**
-     * Get the number of fragments to be displayed in the ViewPager.
-     */
+    
     @Override
     public int getCount() {
         return DEFAULT_NUM_SCREENS;
     }
-
-    /**
-     * Return a new GridFragment for the given page position (radix 0).
-     * Information that is needed by the GridFragment is provided via
-     * argument passing.
-     */
+    
     @Override
     public Fragment getItem(int position) {
         Bundle args = new Bundle();
         args.putInt("pageNum", position + 1);
-
-        // Return a new GridFragment object.
         GridFragment f = new GridFragment();
         f.setArguments(args);
         return f;

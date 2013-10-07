@@ -1,16 +1,12 @@
 package com.hichi.poli;
 
-/**
- * Derivative Authors: _ Original Authors: Copyright (C) 2012 Wglxy.com
- * Originally licensed under the Apache License, Version 2.0:
- * http://www.apache.org/licenses/LICENSE-2.0
- */
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
+import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import com.androidquery.AQuery;
@@ -57,7 +53,7 @@ public class SourceActivity extends FragmentActivity implements LoaderManager.Lo
             engine.getSettings().setJavaScriptEnabled(true);
             engine.loadUrl(json.getString("src"));
         } catch (JSONException ex) {
-            //
+            Log.d("DEBUG", "Error in SourceActivity: " + ex.toString());
         }
     }
 

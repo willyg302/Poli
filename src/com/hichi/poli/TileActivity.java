@@ -1,10 +1,5 @@
 package com.hichi.poli;
 
-/**
- * Derivative Authors: _ Original Authors: Copyright (C) 2012 Wglxy.com
- * Originally licensed under the Apache License, Version 2.0:
- * http://www.apache.org/licenses/LICENSE-2.0
- */
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -12,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import com.androidquery.AQuery;
@@ -74,7 +70,7 @@ public class TileActivity extends FragmentActivity implements LoaderManager.Load
                 }
             });
         } catch (JSONException ex) {
-            //
+            Log.d("DEBUG", "Error in TileActivity: " + ex.toString());
         }
     }
 

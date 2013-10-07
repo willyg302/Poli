@@ -1,10 +1,5 @@
 package com.hichi.grid;
 
-/**
- * Derivative Authors: _ Original Authors: Copyright (C) 2012 Wglxy.com
- * Originally licensed under the Apache License, Version 2.0:
- * http://www.apache.org/licenses/LICENSE-2.0
- */
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -50,6 +45,43 @@ public class GridFragment extends Fragment implements LoaderManager.LoaderCallba
         Bundle args = getArguments();
         pageNum = (args != null) ? args.getInt("pageNum") : 0;
     }
+    
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.demo_pager_grid, container, false);
+        mGridView = (GridView) view.findViewById(R.id.gridview);
+        mGridView.setTag(Integer.valueOf(pageNum));
+        
+        Resources res = this.getActivity().getResources();
+        String label = res.getString(R.string.pg_untitled);
+        switch (pageNum) {
+            case 1:
+                label = res.getString(R.string.pg_search);
+                break;
+            case 2:
+                label = res.getString(R.string.pg_favorites);
+                break;
+            default:
+                break;
+        }
+
+        // Set label text for the view (@TODO: label icon?)
+        View tv = view.findViewById(R.id.text);
+        if (tv != null) {
+            ((TextView) tv).setText(label);
+        }
+
+        // Hide the "no items" content until it is needed.
+        View nc = view.findViewById(R.id.no_topics_text);
+        if (nc != null) {
+            nc.setVisibility(View.INVISIBLE);
+        }
+        
+        // This actually populates the screen through the DB!!!
+        this.getLoaderManager().initLoader(pageNum, null, this);
+        
+        return view;
+    }
 
     /**
      * When the activity is created, divide the usable space into columns and
@@ -61,8 +93,6 @@ public class GridFragment extends Fragment implements LoaderManager.LoaderCallba
 
         Activity a = getActivity();
         Resources res = a.getResources();
-
-        mGridView = (GridView) getView().findViewById(R.id.gridview);
 
         DisplayMetrics metrics = new DisplayMetrics();
         a.getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -83,14 +113,14 @@ public class GridFragment extends Fragment implements LoaderManager.LoaderCallba
         int heightUsed = (numRows + 1) * gridVSpacing + (titleHeight + 2 * titlePadding) + otherGridH;
         int widthUsed = (numCols + 1) * gridHSpacing + otherGridW;
 
-        int cellWidth = (metrics.widthPixels - widthUsed) / numCols;
-        int cellHeight = (metrics.heightPixels - heightUsed) / numRows;
+        int tileWidth = (metrics.widthPixels - widthUsed) / numCols;
+        int tileHeight = (metrics.heightPixels - heightUsed) / numRows;
 
         if (mGridView == null) {
-            Log.d("DEBUG", "Unable to locate the gridview.");
+            Log.d("DEBUG", "GridFragment: Unable to locate the gridview");
         } else {
             // Connect the gridview with an adapter that fills up the space.
-            mGridView.setAdapter(new TileAdapter(a, cellWidth, cellHeight));
+            mGridView.setAdapter(new TileAdapter(a, tileWidth, tileHeight));
             mGridView.setOnItemClickListener(new OnItemClickListener() {
                 public void onItemClick(AdapterView<?> av, View view, int i, long l) {
                     showTopic(i);
@@ -106,45 +136,7 @@ public class GridFragment extends Fragment implements LoaderManager.LoaderCallba
             });
         }
     }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.demo_pager_grid, container, false);
-        GridView gridview = (GridView) view.findViewById(R.id.gridview);
-        gridview.setTag(new Integer(pageNum));
-        
-        Resources res = this.getActivity().getResources();
-        
-        String label = res.getString(R.string.pg_untitled);
-        switch (pageNum) {
-            case 1:
-                label = res.getString(R.string.pg_search);
-                break;
-            case 2:
-                label = res.getString(R.string.pg_favorites);
-                break;
-            default:
-                break;
-        }
-
-        // Set label text for the view
-        View tv = view.findViewById(R.id.text);
-        if (tv != null) {
-            ((TextView) tv).setText(label);
-        }
-
-        // Hide the "no items" content until it is needed.
-        View nc = view.findViewById(R.id.no_topics_text);
-        if (nc != null) {
-            nc.setVisibility(View.INVISIBLE);
-        }
-        
-        // This actually populates the screen through the DB!!!
-        this.getLoaderManager().initLoader(pageNum, null, this);
-        
-        return view;
-    }
-
+    
     /**
      * Start a TileActivity to display the tile of the given index.
      */

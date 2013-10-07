@@ -6,6 +6,11 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 /**
  * A helper class, our app only uses this to communicate with the DB.
+ * 
+ * NOTE: This class also provides functionality for copying our pre-generated
+ * DB from the assets/databases folder when no in-memory DB exists by extending
+ * from SQLiteAssetHelper. To force copying of a new DB into memory, clear
+ * user data for this app from within Android.
  *
  * @author William Gaul
  */

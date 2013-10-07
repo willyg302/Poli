@@ -16,6 +16,8 @@ import com.agimind.widget.SlideHolder;
  * Horizontal scrolling of pages is supported by the Android compatibility
  * package, revision 4. If you touch the image for a topic, you see the image
  * full-screen. Touching that image takes you to the topic text.
+ * 
+ * @author: William Gaul
  */
 public class MainActivity extends FragmentActivity {
     
@@ -30,7 +32,6 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.demo_pager);
 
         Resources res = getResources();
-        
         initializeSidebar(res);
 
         // Initialize our view pager and adapter

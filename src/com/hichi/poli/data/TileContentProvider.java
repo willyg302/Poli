@@ -27,6 +27,7 @@ public class TileContentProvider extends ContentProvider {
     private static final int TILE_ID = 20;
     private static final String AUTHORITY = "com.hichi." + MainActivity.APP_NAME + ".data";
     private static final String BASE_PATH = "tiles";
+    
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + BASE_PATH);
     public static final String CONTENT_TYPE = ContentResolver.CURSOR_DIR_BASE_TYPE + "/tiles";
     public static final String CONTENT_ITEM_TYPE = ContentResolver.CURSOR_ITEM_BASE_TYPE + "/tile";
@@ -46,13 +47,8 @@ public class TileContentProvider extends ContentProvider {
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
-
-        // Check if the caller has requested a column which does not exist
-        checkColumns(projection);
-
-        // Set the table
+        checkColumns(projection); // Make sure the columns actually exist!
         queryBuilder.setTables(TileTable.TABLE_TILE);
-
         int uriType = sURIMatcher.match(uri);
         switch (uriType) {
             case TILES:
@@ -63,7 +59,6 @@ public class TileContentProvider extends ContentProvider {
             default:
                 throw new IllegalArgumentException("Unknown URI: " + uri);
         }
-
         SQLiteDatabase db = database.getWritableDatabase();
         Cursor cursor = queryBuilder.query(db, projection, selection, selectionArgs, null, null, sortOrder);
         
