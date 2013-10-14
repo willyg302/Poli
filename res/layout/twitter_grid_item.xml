@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="fill_parent"
              android:layout_height="fill_parent">
@@ -8,13 +8,11 @@
                android:layout_height="fill_parent" 
                android:padding="@dimen/grid_image_padding"    
                android:scaleType="centerCrop"
-               android:background="@color/background_grid1_cell"
-               android:src="@drawable/home" />
+               android:background="@color/twitter_blue" />
     
     <TextView android:id="@+id/title"
               android:layout_width="fill_parent" 
               android:layout_height="wrap_content" 
-              android:layout_marginBottom="0dip"
               android:layout_gravity="bottom"
 
               android:padding="2dip"

@@ -41,8 +41,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** ffeeeeee
          */
         public static final int background_grid1_cell=0x7f040003;
+        public static final int facebook_blue=0x7f040006;
         public static final int topic_text=0x7f040005;
         public static final int topic_title_text=0x7f040004;
+        public static final int twitter_blue=0x7f040007;
     }
     public static final class dimen {
         /**  Because 96dp sidebar!!!! 
@@ -77,6 +79,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int search=0x7f020005;
         public static final int stats=0x7f020006;
         public static final int whos_who=0x7f020007;
+        public static final int youtube_play=0x7f020008;
     }
     public static final class id {
         public static final int actionbar_compat=0x7f070000;
@@ -87,6 +90,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int image=0x7f07000b;
         public static final int menu_refresh=0x7f070004;
         public static final int no_topics_text=0x7f07000a;
+        public static final int overlay=0x7f07000e;
         public static final int pager=0x7f070007;
         public static final int sidebar=0x7f070006;
         public static final int slideHolder=0x7f070005;
@@ -102,8 +106,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int demo_pager=0x7f030000;
         public static final int demo_pager_grid=0x7f030001;
         public static final int demo_pager_grid_item=0x7f030002;
-        public static final int sidebar_button=0x7f030003;
-        public static final int source_view=0x7f030004;
+        public static final int facebook_grid_item=0x7f030003;
+        public static final int sidebar_button=0x7f030004;
+        public static final int source_view=0x7f030005;
+        public static final int twitter_grid_item=0x7f030006;
+        public static final int youtube_grid_item=0x7f030007;
     }
     public static final class string {
         public static final int app_name=0x7f080000;

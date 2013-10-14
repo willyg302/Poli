@@ -4,5 +4,8 @@
     <color name="background_grid1">#FFFFFFFF</color><!--ffeeeeee-->
     <color name="background_grid1_cell">#33AAAAAA</color>
     <color name="topic_title_text">#FF0000BB</color>
-    <color name="topic_text">#ffdddddd</color>
+    <color name="topic_text">#FFDDDDDD</color>
+    
+    <color name="facebook_blue">#FF3B5998</color>
+    <color name="twitter_blue">#FF00ACED</color>
 </resources>
