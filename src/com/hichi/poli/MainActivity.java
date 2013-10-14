@@ -29,6 +29,10 @@ public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // To fix transparent PNG rendering bug
+        //getWindow().getAttributes().format = android.graphics.PixelFormat.RGBA_8888;
+        
         setContentView(R.layout.demo_pager);
 
         Resources res = getResources();

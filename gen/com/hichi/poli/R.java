@@ -92,6 +92,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int no_topics_text=0x7f07000a;
         public static final int overlay=0x7f07000e;
         public static final int pager=0x7f070007;
+        public static final int player=0x7f07000f;
         public static final int sidebar=0x7f070006;
         public static final int slideHolder=0x7f070005;
         public static final int text=0x7f070008;
