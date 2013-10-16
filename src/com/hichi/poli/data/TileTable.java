@@ -18,6 +18,9 @@ public class TileTable {
     public static final String COLUMN_TYPE = "type";
     public static final String COLUMN_DATA = "data";
     public static final String COLUMN_BOOKMARKED = "bookmarked";
+    public static final String COLUMN_HASHTAG = "hashtag";
+    public static final String COLUMN_CANDIDATE = "candidate";
+    public static final String COLUMN_CREATED = "created";
     
     public static void onCreate(SQLiteDatabase database) {
         // Do nothing, for now
@@ -33,7 +36,10 @@ public class TileTable {
             COLUMN_ID,
             COLUMN_TYPE,
             COLUMN_DATA,
-            COLUMN_BOOKMARKED
+            COLUMN_BOOKMARKED,
+            COLUMN_HASHTAG,
+            COLUMN_CANDIDATE,
+            COLUMN_CREATED
         };
     }
 }

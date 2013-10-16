@@ -1,1 +1,1 @@
-java -cp ".;lib/*" SQLWriter raw-db-data
+java -cp ".;lib/*" SQLWriter tiletable

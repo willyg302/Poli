@@ -198,7 +198,10 @@ public class GridFragment extends Fragment implements LoaderManager.LoaderCallba
                 String type = d.getString(d.getColumnIndex(TileTable.COLUMN_TYPE));
                 String data = d.getString(d.getColumnIndex(TileTable.COLUMN_DATA));
                 boolean bookmarked = d.getInt(d.getColumnIndex(TileTable.COLUMN_BOOKMARKED)) != 0;
-                newTiles.add(new Tile(id, type, data, bookmarked));
+                String hashtag = d.getString(d.getColumnIndex(TileTable.COLUMN_HASHTAG));
+                String candidate = d.getString(d.getColumnIndex(TileTable.COLUMN_CANDIDATE));
+                String date = d.getString(d.getColumnIndex(TileTable.COLUMN_CREATED));
+                newTiles.add(new Tile(id, type, data, bookmarked, hashtag, candidate, date));
                 d.moveToNext();
             }
             ((TileAdapter) mGridView.getAdapter()).setTileArray(newTiles);
