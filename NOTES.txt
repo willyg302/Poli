@@ -14,3 +14,9 @@ Sometimes the emulator drops and is not recognized by DDMS or Netbeans. To resta
 	"adb start-server"
 
 It also helps to wipe user data when stuff starts to go wrong (when starting emulator through AVD)
+
+
+To get timestamp of FB post:
+1. look at URL of post, grab the number after ?fbid=
+2. Go to http://graph.facebook.com/[ID]
+3. Profit

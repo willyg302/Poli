@@ -1,0 +1,1 @@
+java -cp ".;lib/*" SQLWriter raw-db-data
