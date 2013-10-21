@@ -6,7 +6,6 @@
     <ImageView android:id="@+id/image"
                android:layout_width="fill_parent" 
                android:layout_height="fill_parent" 
-               android:padding="@dimen/grid_image_padding"    
                android:scaleType="centerCrop"
                android:background="@color/background_grid1_cell"
                android:src="@drawable/home" />

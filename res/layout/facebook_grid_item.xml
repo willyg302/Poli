@@ -3,22 +3,22 @@
              android:layout_width="fill_parent"
              android:layout_height="fill_parent">
 
-    <ImageView android:id="@+id/image"
-               android:layout_width="fill_parent" 
-               android:layout_height="fill_parent" 
-               android:padding="@dimen/grid_image_padding"    
-               android:scaleType="centerCrop"
+    <ImageView android:id="@+id/fb_image"
+               style="@style/TileImage"
                android:background="@color/facebook_blue" />
     
-    <TextView android:id="@+id/title"
-              android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:layout_gravity="bottom"
-
-              android:padding="2dip"
-        
-              android:background="#aa000000"
-              android:textColor="#ffffffff"
-              android:textAppearance="?android:attr/textAppearanceSmall"
-              android:text="@string/sample_topic_title" />
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+        <TextView android:id="@+id/fb_title"
+                  style="@style/TileTitle"
+                  android:layout_alignParentTop="true"
+                  android:text="@string/sample_topic_title" />
+        <TextView android:id="@+id/fb_post"
+                  style="@style/PostText"
+                  android:layout_below="@id/fb_title" />
+        <TextView android:id="@+id/fb_desc"
+                  style="@style/DescText"
+                  android:layout_alignParentBottom="true"
+                  android:text="@string/sample_topic_title" />
+    </RelativeLayout>
 </FrameLayout>

@@ -81,14 +81,21 @@ public class TileAdapter extends BaseAdapter {
     
     private void handleFacebookTile(String data, AQuery aq, int position) throws JSONException {
         JSONObject json = new JSONObject(data);
-        aq.id(R.id.image).tag(Integer.valueOf(position));
-        aq.id(R.id.title).text(json.getString("title")).textSize(8f).tag(Integer.valueOf(position)).typeface(HC).height(mCellHeight/4);
+        aq.id(R.id.fb_image).tag(Integer.valueOf(position));
+        if (json.has("img")) {
+            aq.id(R.id.fb_image).image(json.getString("img"));
+        }
+        aq.id(R.id.fb_title).text(json.getString("title")).tag(Integer.valueOf(position)).typeface(HC);
+        aq.id(R.id.fb_post).text(json.getString("desc")).tag(Integer.valueOf(position)).typeface(HC);
+        aq.id(R.id.fb_desc).text(json.getString("likes")).tag(Integer.valueOf(position)).typeface(HC).height(mCellHeight/4);
     }
     
     private void handleTwitterTile(String data, AQuery aq, int position) throws JSONException {
         JSONObject json = new JSONObject(data);
-        aq.id(R.id.image).tag(Integer.valueOf(position));
-        aq.id(R.id.title).text(json.getString("title")).textSize(8f).tag(Integer.valueOf(position)).typeface(HC).height(mCellHeight/4);
+        aq.id(R.id.tw_image).tag(Integer.valueOf(position));
+        aq.id(R.id.tw_title).text(json.getString("title")).tag(Integer.valueOf(position)).typeface(HC);
+        aq.id(R.id.tw_tweet).text(json.getString("desc")).tag(Integer.valueOf(position)).typeface(HC);
+        aq.id(R.id.tw_desc).text(json.getString("retweets")).tag(Integer.valueOf(position)).typeface(HC).height(mCellHeight/4);
     }
     
     private void handleNewsTile(String data, AQuery aq, int position) throws JSONException {
@@ -99,8 +106,9 @@ public class TileAdapter extends BaseAdapter {
     
     private void handleYoutubeTile(String data, AQuery aq, int position) throws JSONException {
         JSONObject json = new JSONObject(data);
-        aq.id(R.id.image).image(json.getString("img")).tag(Integer.valueOf(position));
-        aq.id(R.id.title).text(json.getString("title")).textSize(8f).tag(Integer.valueOf(position)).typeface(HC).height(mCellHeight/4);
+        aq.id(R.id.yt_image).image(json.getString("img")).tag(Integer.valueOf(position));
+        aq.id(R.id.yt_title).text(json.getString("title")).tag(Integer.valueOf(position)).typeface(HC);
+        aq.id(R.id.yt_desc).text(json.getString("desc")).tag(Integer.valueOf(position)).typeface(HC).height(mCellHeight/4);
     }
     
     private void handleDefaultTile(String data, AQuery aq, int position) throws JSONException {

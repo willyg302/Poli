@@ -41,15 +41,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** ffeeeeee
          */
         public static final int background_grid1_cell=0x7f040003;
-        public static final int facebook_blue=0x7f040006;
+        public static final int facebook_blue=0x7f040007;
+        public static final int tile_default_bg=0x7f040006;
         public static final int topic_text=0x7f040005;
         public static final int topic_title_text=0x7f040004;
-        public static final int twitter_blue=0x7f040007;
+        public static final int twitter_blue=0x7f040008;
     }
     public static final class dimen {
-        /**  Because 96dp sidebar!!!! 
-         */
-        public static final int grid_image_padding=0x7f060006;
         public static final int image_grid_hspacing=0x7f060003;
         /** Between tiles and text
          */
@@ -58,15 +56,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int other_grid_h=0x7f060004;
         public static final int other_grid_w=0x7f060005;
-        public static final int sidebar_button=0x7f06000d;
-        public static final int text_body_padding=0x7f060008;
-        public static final int text_size_large=0x7f06000b;
-        public static final int text_size_medium=0x7f06000a;
-        public static final int text_size_small=0x7f060009;
-        public static final int text_size_very_large=0x7f06000c;
-        /**  No border around tile! 
+        public static final int sidebar_button=0x7f06000c;
+        public static final int text_body_padding=0x7f060007;
+        public static final int text_size_large=0x7f06000a;
+        public static final int text_size_medium=0x7f060009;
+        public static final int text_size_small=0x7f060008;
+        public static final int text_size_very_large=0x7f06000b;
+        /**  Because 96dp sidebar!!!! 
          */
-        public static final int title_text_padding=0x7f060007;
+        public static final int title_text_padding=0x7f060006;
         public static final int topic_title_height=0x7f060000;
         public static final int topic_title_padding=0x7f060001;
     }
@@ -86,18 +84,29 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int actionbar_compat_item_refresh=0x7f070003;
         public static final int actionbar_compat_item_refresh_progress=0x7f070002;
         public static final int actionbar_compat_title=0x7f070001;
+        public static final int fb_desc=0x7f070010;
+        public static final int fb_image=0x7f07000d;
+        public static final int fb_post=0x7f07000f;
+        public static final int fb_title=0x7f07000e;
         public static final int gridview=0x7f070009;
         public static final int image=0x7f07000b;
         public static final int menu_refresh=0x7f070004;
         public static final int no_topics_text=0x7f07000a;
-        public static final int overlay=0x7f07000e;
         public static final int pager=0x7f070007;
-        public static final int player=0x7f07000f;
         public static final int sidebar=0x7f070006;
         public static final int slideHolder=0x7f070005;
         public static final int text=0x7f070008;
         public static final int title=0x7f07000c;
-        public static final int web_engine=0x7f07000d;
+        public static final int tw_desc=0x7f070015;
+        public static final int tw_image=0x7f070012;
+        public static final int tw_title=0x7f070013;
+        public static final int tw_tweet=0x7f070014;
+        public static final int web_engine=0x7f070011;
+        public static final int yt_desc=0x7f07001a;
+        public static final int yt_image=0x7f070016;
+        public static final int yt_overlay=0x7f070017;
+        public static final int yt_player=0x7f070018;
+        public static final int yt_title=0x7f070019;
     }
     public static final class integer {
         public static final int grid_num_cols=0x7f050001;
@@ -136,9 +145,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int sample_topic_title=0x7f08000c;
     }
     public static final class style {
+        public static final int BaseText=0x7f090006;
+        public static final int DescText=0x7f090009;
         public static final int GridPageTitleText=0x7f090004;
         public static final int ImageGridButton=0x7f090001;
+        public static final int PostText=0x7f090008;
+        /** parent used to be android:Theme.Holo.Light
+         */
         public static final int Theme_Demo=0x7f090000;
+        /**  @WillyG: Added below 
+         */
+        public static final int TileImage=0x7f090005;
+        public static final int TileTitle=0x7f090007;
         public static final int TopicText=0x7f090003;
         public static final int TopicTitleText=0x7f090002;
     }

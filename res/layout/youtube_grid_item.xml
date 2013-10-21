@@ -3,35 +3,31 @@
              android:layout_width="fill_parent"
              android:layout_height="fill_parent">
 
-    <ImageView android:id="@+id/image"
-               android:layout_width="fill_parent" 
-               android:layout_height="fill_parent" 
-               android:padding="@dimen/grid_image_padding"    
-               android:scaleType="centerCrop"
-               android:background="@color/background_grid1_cell" />
+    <ImageView android:id="@+id/yt_image"
+               style="@style/TileImage" />
     
-    <View android:id="@+id/overlay"
+    <View android:id="@+id/yt_overlay"
           android:layout_width="fill_parent"
           android:layout_height="fill_parent"
           android:layout_gravity="bottom"
           android:background="#77000000" />
     
-    <ImageView android:id="@+id/player"
+    <ImageView android:id="@+id/yt_player"
                android:layout_width="34dp"
                android:layout_height="24dp"
                android:layout_gravity="center_vertical|center_horizontal"
                android:background="@android:color/transparent"
                android:src="@drawable/youtube_play" />
     
-    <TextView android:id="@+id/title"
-              android:layout_width="fill_parent" 
-              android:layout_height="wrap_content" 
-              android:layout_gravity="bottom"
-
-              android:padding="2dip"
-        
-              android:background="#aa000000"
-              android:textColor="#ffffffff"
-              android:textAppearance="?android:attr/textAppearanceSmall"
-              android:text="@string/sample_topic_title" />
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+        <TextView android:id="@+id/yt_title"
+                  style="@style/TileTitle"
+                  android:layout_alignParentTop="true"
+                  android:text="@string/sample_topic_title" />
+        <TextView android:id="@+id/yt_desc"
+                  style="@style/DescText"
+                  android:layout_alignParentBottom="true"
+                  android:text="@string/sample_topic_title" />
+    </RelativeLayout>
 </FrameLayout>
