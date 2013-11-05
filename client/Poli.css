@@ -1,0 +1,255 @@
+/**
+ * Original Author: Start Bootstrap - http://startbootstrap.com
+ * Licensed under Apache 2.0
+ */
+
+/* Global Styles */
+
+body {
+	margin-top: 50px;
+}
+
+#wrapper {
+	padding-left: 0;
+}
+
+#page-wrapper {
+	width: 100%;
+	padding: 5px 15px;
+}
+
+.portfolio-item {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/* Nav Messages */
+
+.messages-dropdown .dropdown-menu .message-preview .avatar,
+.messages-dropdown .dropdown-menu .message-preview .name,
+.messages-dropdown .dropdown-menu .message-preview .message,
+.messages-dropdown .dropdown-menu .message-preview .time {
+	display: block;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .avatar {
+	float: left;
+	margin-right: 15px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .name {
+	font-weight: bold;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .message {
+	font-size: 12px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .time {
+	font-size: 12px;
+}
+
+
+/* Nav Announcements */
+
+.announcement-heading {
+	font-size: 50px;
+	margin: 0;
+}
+
+.announcement-text {
+	margin: 0;
+}
+
+
+.side-nav>li {
+	font-size: 24px;
+}
+
+/* Edit Below to Customize Widths > 768px */
+@media (min-width:768px) {
+
+	/* Wrappers */
+
+	#wrapper {
+		padding-right: 225px;
+	}
+
+	#page-wrapper {
+		padding: 15px 25px;
+	}
+
+	/* Side Nav */
+
+	.side-nav {
+		margin-right: -225px;
+		right: 225px;
+		width: 225px;
+		float:right;
+		position: fixed;
+		top: 50px;
+		height: 100%;
+		border-radius: 0;
+		border: none;
+		background-color: #222222;
+		overflow-y: auto;
+	}
+
+	/* Bootstrap Default Overrides - Customized Dropdowns for the Side Nav */
+
+	.side-nav>li.dropdown>ul.dropdown-menu {
+		position: relative;
+		min-width: 225px;
+		margin: 0;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		background-color: transparent;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+
+	.side-nav>li.dropdown>ul.dropdown-menu>li>a {
+		color: #999999;
+		padding: 15px 15px 15px 25px;
+	}
+
+	.side-nav>li.dropdown>ul.dropdown-menu>li>a:hover,
+	.side-nav>li.dropdown>ul.dropdown-menu>li>a.active,
+	.side-nav>li.dropdown>ul.dropdown-menu>li>a:focus {
+		color: #fff;
+		background-color: #080808;
+	}
+
+	.side-nav>li>a {
+		width: 225px;
+	}
+
+	.navbar-inverse .navbar-nav>li>a:hover,
+	.navbar-inverse .navbar-nav>li>a:focus {
+		background-color: #080808;
+	}
+
+	/* Nav Messages */
+
+	.messages-dropdown .dropdown-menu {
+		min-width: 300px;
+	}
+
+	.messages-dropdown .dropdown-menu li a {
+		white-space: normal;
+	}
+}
+
+
+
+/** ISOTOPE TILE STUFF **/
+
+.tile {
+	width: 256px;
+	height: 256px;
+	margin: 5px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	background: #888;
+	color: #222;
+
+	/* BG Image */
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.tile * {
+	position: absolute;
+	margin: 0;
+}
+
+.tile .heading {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+	top: 0.5rem;
+	left: 1rem;
+	width:78%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 3rem;
+	line-height: 4rem;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+.tile .contents {
+	top: 4rem;
+	width: 100%;
+	height: 13rem;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	color: white;
+	padding:1rem;
+	overflow: hidden;
+}
+
+.tile .bottombar {
+	bottom: 0px;
+	width: 100%;
+	height: 7rem;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.tile .desc {
+	bottom: 2.9rem;
+	width: 100%;
+	height: 4.1rem;
+	font-size: 1.5rem;
+	line-height: 1.8rem;
+	color: white;
+	padding:0.5rem;
+	overflow: hidden;
+}
+
+.tile .subdesc {
+	bottom: 0px;
+	width: 100%;
+	font-size: 1.5rem;
+	line-height: 1.8rem;
+	color: #bfbfbf;
+	padding:0.5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.tile .youtube {
+	content: ' ';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+	background-image: url('/youtube_play.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 40%;
+}
+
+.tile .bookmark {
+	top: 0.5rem;
+	right: 0.5rem;
+	font-size: 3rem;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+/* Tile hovers */
+
+.clickable .tile:hover {
+	cursor: pointer;
+}
+
+.clickable .tile .bookmark:hover {
+	color: yellow;
+}

@@ -1,0 +1,149 @@
+<head>
+	<title>Poli</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!--
+	Why is this necessary? Shouldn't Meteor include it automatically? Well...
+	Meteor includes custom .css BEFORE package .css, but since we have a reference to
+	Bootstrap, that means our Poli.css Bootstrap overrides won't get applied.
+	So we add this here to get applied LAST
+	-->
+	<link href="client/Poli.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="wrapper">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="Poli.html">Poli</a>
+			</div>
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				{{> sidebar}}
+				{{> topbar}}
+			</div>
+		</nav>
+		<div id="page-wrapper">
+			{{> page}}
+		</div>
+	</div>
+</body>
+
+
+<template name="sidebar">
+	<ul class="nav navbar-nav side-nav">
+		<li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+		<li><a href="charts.html"><span class="glyphicon glyphicon-heart"></span> Favorites</a></li>
+		<li><a href="tables.html"><span class="glyphicon glyphicon-refresh"></span> Refresh</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-collapse-down"></span> More</a>
+			<ul class="dropdown-menu">
+				<li><a href="#">Dropdown Item</a></li>
+				<li><a href="#">Another Item</a></li>
+			</ul>
+		</li>
+	</ul>
+</template>
+
+<template name="topbar">
+	<ul class="nav navbar-nav navbar-user">
+		<form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-default">Go &rarr;</button>
+		</form>
+		<li class="dropdown user-dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> John Smith <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+				<li class="divider"></li>
+				<li><a href="#"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>
+			</ul>
+		</li>
+	</ul>
+</template>
+
+
+<template name="page">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1><span class="glyphicon glyphicon-{{icon}}"></span> {{title}}
+				<div class="option-set btn-group" data-option-key="filter">
+					<a href="#filter" data-option-value="*" class="btn btn-default active">All</a>
+					<a href="#filter" data-option-value=".bookmarked" class="btn btn-default">Bookmarked</a>
+				</div>
+			</h1>
+		</div>
+	</div>
+	<div id="container" class="clickable clearfix">
+		{{#each tiles}}
+			{{> tile}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="tile">
+	<div class="tile{{#if bookmarked}} bookmarked{{/if}}" style="background-image: url('{{#if data.img}}{{data.img}}{{else}}http://placehold.it/512/{{color type}}&text=+{{/if}}');">
+		<div class="bottombar"></div>
+		{{#if comp type '===' 'facebook'}}
+			{{> fbtile}}
+		{{/if}}
+		{{#if comp type '===' 'youtube'}}
+			{{> yttile}}
+		{{/if}}
+		{{#if comp type '===' 'twitter'}}
+			{{> twtile}}
+		{{/if}}
+		{{#if comp type '===' 'default'}}
+			{{> dftile}}
+		{{/if}}
+		<span class="bookmark glyphicon glyphicon-star{{#unless bookmarked}}-empty{{/unless}}"></span>
+	</div>
+</template>
+
+
+<template name="fbtile">
+	<h3 class="heading">{{data.user}}</h3>
+	<div class="contents">
+		{{#unless data.img}}{{data.desc}}{{/unless}}
+	</div>
+	<div class="desc">
+		{{#if data.img}}{{data.desc}}{{else}}{{timestamp}}{{/if}}
+	</div>
+	<div class="subdesc">
+		{{data.likes}} people like this
+	</div>
+</template>
+
+<template name="yttile">
+	<div class="youtube"></div>
+	<h3 class="heading">{{data.channel}}</h3>
+	<div class="desc">
+		{{data.title}}
+	</div>
+	<div class="subdesc">
+		{{data.views}} views
+	</div>
+</template>
+
+<template name="twtile">
+	<h3 class="heading">{{data.user}}</h3>
+	<div class="contents">
+		{{data.tweet}}
+	</div>
+	<div class="desc">
+		{{timestamp}}
+	</div>
+	<div class="subdesc">
+		Retweeted {{data.retweets}} times
+	</div>
+</template>
