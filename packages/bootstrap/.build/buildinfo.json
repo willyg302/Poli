@@ -1,0 +1,41 @@
+{
+  "builtBy": "meteor/10",
+  "sliceDependencies": {
+    "browser.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\bootstrap\\package.js": "bc64e71ca7b04ad1680ee9b9e19719e9ebeef26e",
+        "C:\\Users\\William Gaul\\Documents\\Poli\\public\\bootstrap\\js\\bootstrap.min.js": "75a42212affc118fef849aba4b9326a7da2acda1"
+      },
+      "directories": []
+    },
+    "os.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\bootstrap\\package.js": "bc64e71ca7b04ad1680ee9b9e19719e9ebeef26e"
+      },
+      "directories": []
+    },
+    "tests.browser.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\bootstrap\\package.js": "bc64e71ca7b04ad1680ee9b9e19719e9ebeef26e"
+      },
+      "directories": []
+    },
+    "tests.os.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\bootstrap\\package.js": "bc64e71ca7b04ad1680ee9b9e19719e9ebeef26e"
+      },
+      "directories": []
+    }
+  },
+  "pluginDependencies": {
+    "files": {
+      "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\bootstrap\\package.js": "bc64e71ca7b04ad1680ee9b9e19719e9ebeef26e"
+    },
+    "directories": []
+  },
+  "pluginProviderPackages": {
+    "bootstrap": "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\bootstrap",
+    "meteor": "C:\\Users\\William Gaul\\AppData\\Local\\.meteor\\packages\\meteor\\30266216a1"
+  },
+  "source": "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\bootstrap"
+}

@@ -1,0 +1,186 @@
+[
+	{
+		"type": "facebook",
+		"bookmarked": false,
+		"hashtags": ["EnoughAlready"],
+		"candidate": "obama",
+		"created": "2013-10-08T16:32:28Z",
+		"data": {
+			"user": "BarackObama",
+			"src": "https://www.facebook.com/photo.php?fbid=10151861644671749&set=a.53081056748.66806.6815841748&type=1&theater",
+			"desc": "Tell the Tea Party Republicans in the House of Representatives to stop holding the economy hostage. Say #EnoughAlready: http://OFA.BO/oewrXF",
+			"likes": "180870",
+			"shares": "20054",
+			"comments": "34765"
+		}
+	},
+	{
+		"type": "facebook",
+		"bookmarked": false,
+		"hashtags": ["EnoughAlready"],
+		"candidate": "obama",
+		"created": "2013-10-13T16:25:55Z",
+		"data": {
+			"user": "BarackObama",
+			"img": "https://dl.dropboxusercontent.com/u/46137853/appdbimgs/fb-bo-pix-2.png",
+			"src": "https://www.facebook.com/photo.php?fbid=10151871288006749&set=a.53081056748.66806.6815841748&type=1&theater",
+			"desc": "The Tea Party Republicans' government shutdown is jeopardizing veterans' benefits. Say #EnoughAlready: http://OFA.BO/Fyv15E",
+			"likes": "52410",
+			"shares": "6540",
+			"comments": "5895"
+		}
+	},
+	{
+		"type": "facebook",
+		"bookmarked": false,
+		"hashtags": ["RebelNation", "HottyToddy"],
+		"candidate": "romney",
+		"created": "2013-10-12T22:49:03Z",
+		"data": {
+			"user": "Mitt Romney",
+			"img": "https://dl.dropboxusercontent.com/u/46137853/appdbimgs/fb-mr-pix-1.jpg",
+			"src": "https://www.facebook.com/photo.php?fbid=10151698805371121&set=a.161403756120.123284.21392801120&type=1&theater",
+			"desc": "Good to be in #RebelNation with Rick Perry and Phil Bryant. #HottyToddy",
+			"likes": "34204",
+			"shares": "910",
+			"comments": "1796"
+		}
+	},
+	{
+		"type": "facebook",
+		"bookmarked": false,
+		"hashtags": [],
+		"candidate": "romney",
+		"created": "2013-10-10T15:08:59Z",
+		"data": {
+			"user": "Ann Romney",
+			"img": "https://dl.dropboxusercontent.com/u/46137853/appdbimgs/fb-mr-pix-2.jpg",
+			"src": "https://www.facebook.com/photo.php?fbid=593854970656796&set=a.181353355240295.33926.139215399454091&type=1&theater",
+			"desc": "Mitt Romney made a surprise appearance and joined me and Jay Leno last night. So much fun - here's the clip! http://bit.ly/GR3jDR",
+			"likes": "12412",
+			"shares": "2240",
+			"comments": "1284"
+		}
+	},
+	{
+		"type": "twitter",
+		"bookmarked": false,
+		"hashtags": ["TeaPartyShutdown", "EnoughAlready"],
+		"candidate": "obama",
+		"created": "2013-10-14T08:03:00Z",
+		"data": {
+			"user": "@BarackObama",
+			"src": "https://twitter.com/BarackObama/statuses/389813702079180800",
+			"tweet": "The #TeaPartyShutdown is harming small businesses. Say you've had #EnoughAlready: http://OFA.BO/wozKPG  pic.twitter.com/YlUt9AMno1",
+			"retweets": "945",
+			"favorites": "438"
+		}
+	},
+	{
+		"type": "twitter",
+		"bookmarked": false,
+		"hashtags": ["NationalComingOutDay"],
+		"candidate": "obama",
+		"created": "2013-10-11T04:25:00Z",
+		"data": {
+			"user": "@BarackObama",
+			"src": "https://twitter.com/BarackObama/statuses/388671654504574976",
+			"tweet": "Today is a day to celebrate being who you are. #NationalComingOutDay pic.twitter.com/jNIALpH20R",
+			"retweets": "8137",
+			"favorites": "4304"
+		}
+	},
+	{
+		"type": "twitter",
+		"bookmarked": false,
+		"hashtags": [],
+		"candidate": "romney",
+		"created": "2013-09-20T10:33:00Z",
+		"data": {
+			"user": "@MittRomney",
+			"src": "https://twitter.com/MittRomney/statuses/381154281673355264",
+			"tweet": "Our 22nd grandchild was officially adopted today: Kieran James Romney. cc: @AnnDRomney pic.twitter.com/7t1ZFxOJS4",
+			"retweets": "1193",
+			"favorites": "1498"
+		}
+	},
+	{
+		"type": "twitter",
+		"bookmarked": false,
+		"hashtags": [],
+		"candidate": "romney",
+		"created": "2013-09-13T13:51:00Z",
+		"data": {
+			"user": "@MittRomney",
+			"src": "https://twitter.com/MittRomney/statuses/384827807051689984",
+			"tweet": ".@AnnDRomney's cookbook \"The Romney Family Table\" comes out tomorrow. Couldn't be prouder of my sweetheart http://bit.ly/1eVhxCy",
+			"retweets": "291",
+			"favorites": "321"
+		}
+	},
+	{
+		"type": "twitter",
+		"bookmarked": false,
+		"hashtags": [],
+		"candidate": "romney",
+		"created": "2013-09-19T05:19:00Z",
+		"data": {
+			"user": "@MittRomney",
+			"src": "https://twitter.com/MittRomney/statuses/380712840849416192",
+			"tweet": "Brilliant and true, @SenJohnMcCain opens eyes in Russia and beyond   http://bit.ly/1aMIrs2",
+			"retweets": "163",
+			"favorites": "110"
+		}
+	},
+	{
+		"type": "youtube",
+		"bookmarked": false,
+		"hashtags": [],
+		"candidate": "obama",
+		"created": "2013-10-01T12:00:00Z",
+		"data": {
+			"channel": "The White House",
+			"img": "https://dl.dropboxusercontent.com/u/46137853/appdbimgs/yt-bo-pix-1.png",
+			"src": "http://www.youtube.com/watch?v=HmRA_tML2tE",
+			"title": "President Obama Delivers a Statement on the Government Shutdown",
+			"views": "91606",
+			"likes": "856",
+			"dislikes": "434",
+			"comments": "3390"
+		}
+	},
+	{
+		"type": "youtube",
+		"bookmarked": false,
+		"hashtags": [],
+		"candidate": "obama",
+		"created": "2013-10-12T12:00:00Z",
+		"data": {
+			"channel": "The White House",
+			"img": "https://dl.dropboxusercontent.com/u/46137853/appdbimgs/yt-bo-pix-2.png",
+			"src": "http://www.youtube.com/watch?v=kaIwmg7fWyI",
+			"title": "Weekly Address: Let's Get Back to the Work of the American People",
+			"views": "54580",
+			"likes": "826",
+			"dislikes": "292",
+			"comments": "2997"
+		}
+	},
+	{
+		"type": "youtube",
+		"bookmarked": false,
+		"hashtags": [],
+		"candidate": "romney",
+		"created": "2013-05-18T12:00:00Z",
+		"data": {
+			"channel": "The Tonight Show With Jay Leno",
+			"img": "https://dl.dropboxusercontent.com/u/46137853/appdbimgs/yt-mr-pix-1.png",
+			"src": "http://www.youtube.com/watch?v=UBeUowi9c20",
+			"title": "Mitt Romney, Part 1 - The Tonight Show with Jay Leno",
+			"views": "59657",
+			"likes": "300",
+			"dislikes": "87",
+			"comments": "459"
+		}
+	}
+]

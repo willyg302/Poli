@@ -1,0 +1,24 @@
+{
+  "format": "unipackage-slice-pre1",
+  "packageVariables": [
+    {
+      "name": "moment",
+      "export": true
+    }
+  ],
+  "uses": [
+    {
+      "package": "meteor"
+    }
+  ],
+  "resources": [
+    {
+      "type": "prelink",
+      "file": "browser/packages/moment.js",
+      "length": 26615,
+      "offset": 0,
+      "servePath": "/packages/moment.js",
+      "sourceMap": "browser/packages/moment.js.map"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "format": "unipackage-slice-pre1",
+  "packageVariables": [],
+  "uses": [
+    {
+      "package": "meteor"
+    },
+    {
+      "package": "jquery"
+    }
+  ],
+  "resources": [
+    {
+      "type": "css",
+      "file": "browser/public/isotope/css/isotope.css",
+      "length": 1519,
+      "offset": 0,
+      "servePath": "/public/isotope/css/isotope.css"
+    },
+    {
+      "type": "prelink",
+      "file": "browser/packages/isotope.js",
+      "length": 17142,
+      "offset": 0,
+      "servePath": "/packages/isotope.js",
+      "sourceMap": "browser/packages/isotope.js.map"
+    }
+  ]
+}

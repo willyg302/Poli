@@ -1,0 +1,43 @@
+{
+  "builtBy": "meteor/10",
+  "sliceDependencies": {
+    "browser.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\handlebar-helpers\\package.js": "afc152c3979d410acb86ba82116863e6693cd34d",
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\handlebar-helpers\\handlebar-helpers.js": "595a0fc705a83d7d4ec5e933bcd7ee42b131d6d9"
+      },
+      "directories": []
+    },
+    "os.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\handlebar-helpers\\package.js": "afc152c3979d410acb86ba82116863e6693cd34d"
+      },
+      "directories": []
+    },
+    "tests.browser.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\handlebar-helpers\\package.js": "afc152c3979d410acb86ba82116863e6693cd34d"
+      },
+      "directories": []
+    },
+    "tests.os.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\handlebar-helpers\\package.js": "afc152c3979d410acb86ba82116863e6693cd34d"
+      },
+      "directories": []
+    }
+  },
+  "pluginDependencies": {
+    "files": {
+      "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\handlebar-helpers\\package.js": "afc152c3979d410acb86ba82116863e6693cd34d"
+    },
+    "directories": []
+  },
+  "pluginProviderPackages": {
+    "handlebar-helpers": "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\handlebar-helpers",
+    "meteor": "C:\\Users\\William Gaul\\AppData\\Local\\.meteor\\packages\\meteor\\30266216a1",
+    "handlebars": "C:\\Users\\William Gaul\\AppData\\Local\\.meteor\\packages\\handlebars\\df1af6986f",
+    "deps": "C:\\Users\\William Gaul\\AppData\\Local\\.meteor\\packages\\deps\\dd411d29b6"
+  },
+  "source": "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\handlebar-helpers"
+}

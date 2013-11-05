@@ -1,0 +1,19 @@
+{
+  "format": "unipackage-slice-pre1",
+  "packageVariables": [],
+  "uses": [
+    {
+      "package": "meteor"
+    }
+  ],
+  "resources": [
+    {
+      "type": "prelink",
+      "file": "browser/packages/bootstrap.js",
+      "length": 28512,
+      "offset": 0,
+      "servePath": "/packages/bootstrap.js",
+      "sourceMap": "browser/packages/bootstrap.js.map"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "builtBy": "meteor/10",
+  "sliceDependencies": {
+    "browser.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\isotope\\package.js": "3db427f77ab32861a63841b0d0b6c2f3accced60",
+        "C:\\Users\\William Gaul\\Documents\\Poli\\public\\isotope\\js\\jquery.isotope.min.js": "213ef9210b4a5c4e73a242e832a08f4abef69a74",
+        "C:\\Users\\William Gaul\\Documents\\Poli\\public\\isotope\\css\\isotope.css": "0de3c23c3df106cf4d6fe4abf0a44c07634b3c37"
+      },
+      "directories": []
+    },
+    "os.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\isotope\\package.js": "3db427f77ab32861a63841b0d0b6c2f3accced60"
+      },
+      "directories": []
+    },
+    "tests.browser.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\isotope\\package.js": "3db427f77ab32861a63841b0d0b6c2f3accced60"
+      },
+      "directories": []
+    },
+    "tests.os.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\isotope\\package.js": "3db427f77ab32861a63841b0d0b6c2f3accced60"
+      },
+      "directories": []
+    }
+  },
+  "pluginDependencies": {
+    "files": {
+      "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\isotope\\package.js": "3db427f77ab32861a63841b0d0b6c2f3accced60"
+    },
+    "directories": []
+  },
+  "pluginProviderPackages": {
+    "isotope": "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\isotope",
+    "meteor": "C:\\Users\\William Gaul\\AppData\\Local\\.meteor\\packages\\meteor\\30266216a1",
+    "jquery": "C:\\Users\\William Gaul\\AppData\\Local\\.meteor\\packages\\jquery\\373d616d0d"
+  },
+  "source": "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\isotope"
+}

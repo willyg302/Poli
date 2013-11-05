@@ -1,0 +1,42 @@
+{
+  "builtBy": "meteor/10",
+  "sliceDependencies": {
+    "browser.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\moment\\package.js": "724bc73c998e1bce8de82bb698ba05b1f2b66d6b",
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\moment\\moment.min.js": "c1c7b4361cdde425e624026b0a79de5bc0b07dc1",
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\moment\\export-moment.js": "a5cd581bbef34fb847ed7f551a972b0087ddbf90"
+      },
+      "directories": []
+    },
+    "os.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\moment\\package.js": "724bc73c998e1bce8de82bb698ba05b1f2b66d6b"
+      },
+      "directories": []
+    },
+    "tests.browser.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\moment\\package.js": "724bc73c998e1bce8de82bb698ba05b1f2b66d6b"
+      },
+      "directories": []
+    },
+    "tests.os.json": {
+      "files": {
+        "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\moment\\package.js": "724bc73c998e1bce8de82bb698ba05b1f2b66d6b"
+      },
+      "directories": []
+    }
+  },
+  "pluginDependencies": {
+    "files": {
+      "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\moment\\package.js": "724bc73c998e1bce8de82bb698ba05b1f2b66d6b"
+    },
+    "directories": []
+  },
+  "pluginProviderPackages": {
+    "moment": "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\moment",
+    "meteor": "C:\\Users\\William Gaul\\AppData\\Local\\.meteor\\packages\\meteor\\30266216a1"
+  },
+  "source": "C:\\Users\\William Gaul\\Documents\\Poli\\packages\\moment"
+}

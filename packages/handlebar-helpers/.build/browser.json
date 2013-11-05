@@ -1,0 +1,30 @@
+{
+  "format": "unipackage-slice-pre1",
+  "packageVariables": [
+    {
+      "name": "Helpers",
+      "export": true
+    }
+  ],
+  "uses": [
+    {
+      "package": "meteor"
+    },
+    {
+      "package": "handlebars"
+    },
+    {
+      "package": "deps"
+    }
+  ],
+  "resources": [
+    {
+      "type": "prelink",
+      "file": "browser/packages/handlebar-helpers.js",
+      "length": 2177,
+      "offset": 0,
+      "servePath": "/packages/handlebar-helpers.js",
+      "sourceMap": "browser/packages/handlebar-helpers.js.map"
+    }
+  ]
+}
