@@ -5,6 +5,14 @@ Tiles = new Meteor.Collection("tiles");
 
 var tilesHandle = Meteor.subscribe("tiles");
 
+/* Prototypes */
+
+Array.prototype.shuffle = function() {
+	for (var j, x, i = this.length; i; j = parseInt(Math.random() * i), x = this[--i], this[i] = this[j], this[j] = x);
+	return this;
+};
+
+
 /* Templating */
 
 Template.fbtile.timestamp = Template.twtile.timestamp = function () {

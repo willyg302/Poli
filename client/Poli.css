@@ -66,6 +66,10 @@ body {
 	font-size: 24px;
 }
 
+.side-nav>li>a>img {
+	height: 3.6rem;
+}
+
 /* Edit Below to Customize Widths > 768px */
 @media (min-width:768px) {
 

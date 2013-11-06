@@ -34,3 +34,9 @@ A Note on Data
 --------------
 
 Currently all the data is hard-coded for testing. At some point we would like to have Poli dynamically pull data from the various social media API's automatically, however.
+
+Credits
+-------
+
+* __Jan Kovarik__: [GLYPHICONS](http://glyphicons.com/)
+* __Ethan Schoonover__: [Solarized](http://ethanschoonover.com/solarized) color palette

@@ -39,16 +39,13 @@
 
 <template name="sidebar">
 	<ul class="nav navbar-nav side-nav">
-		<li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-		<li><a href="charts.html"><span class="glyphicon glyphicon-heart"></span> Favorites</a></li>
-		<li><a href="tables.html"><span class="glyphicon glyphicon-refresh"></span> Refresh</a></li>
-		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-collapse-down"></span> More</a>
-			<ul class="dropdown-menu">
-				<li><a href="#">Dropdown Item</a></li>
-				<li><a href="#">Another Item</a></li>
-			</ul>
-		</li>
+		<li class="active"><a href="index.html"><img src="/img/home.svg"></span> Home</a></li>
+		<li><a href="#"><img src="/img/search.svg"> Search</a></li>
+		<li><a href="#"><img src="/img/my-elections.svg"> My Elections</a></li>
+		<li><a href="#"><img src="/img/mock-vote.svg"> Mock Vote</a></li>
+		<li><a href="#"><img src="/img/compare.svg"> Compare</a></li>
+		<li><a href="#"><img src="/img/stats.svg"> Stats</a></li>
+		<li><a href="#"><img src="/img/whos-who.svg"> Who's Who</a></li>
 	</ul>
 </template>
 
@@ -76,7 +73,7 @@
 <template name="page">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1><span class="glyphicon glyphicon-{{icon}}"></span> {{title}}
+			<h1><img src="/img/{{icon}}.svg" height="48"> {{title}}
 				<div class="option-set btn-group" data-option-key="filter">
 					<a href="#filter" data-option-value="*" class="btn btn-default active">All</a>
 					<a href="#filter" data-option-value=".bookmarked" class="btn btn-default">Bookmarked</a>

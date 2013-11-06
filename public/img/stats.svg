@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="64"
+   height="64"
+   id="svg2985">
+  <defs
+     id="defs2987" />
+  <metadata
+     id="metadata2990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <rect
+       width="64"
+       height="64"
+       x="0"
+       y="-1.3871627e-006"
+       id="rect3009"
+       style="fill:#6c71c4;fill-opacity:1;stroke:none" />
+    <g
+       transform="matrix(0.01777778,0,0,-0.01777778,11.555553,53.333335)"
+       id="g3855"
+       style="fill:#fdf6e3;fill-opacity:1">
+      <path
+         d="M -200,0 V 200 H 0 v 450 q 0,21 15,35.5 15,14.5 35,14.5 h 400 q 21,0 35.5,-14.5 Q 500,671 500,650 V 200 h 100 v 1050 q 0,21 15,35.5 15,14.5 35,14.5 h 400 q 21,0 35.5,-14.5 Q 1100,1271 1100,1250 V 200 h 100 v 2150 q 0,21 15,35.5 15,14.5 35,14.5 h 400 q 21,0 35.5,-14.5 Q 1700,2371 1700,2350 V 200 h 100 v 1450 q 0,21 15,35.5 15,14.5 35,14.5 h 400 q 21,0 35.5,-14.5 Q 2300,1671 2300,1650 V 200 h 200 V 0 H -200 z"
+         id="path3857"
+         style="fill:#fdf6e3;fill-opacity:1" />
+    </g>
+  </g>
+</svg>
