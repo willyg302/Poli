@@ -5,147 +5,156 @@
 
 /* Global Styles */
 
-body {
-	margin-top: 50px;
-}
-
 #wrapper {
-	padding-left: 0;
+	padding-right: 250px;
+	transition: all 0.4s;
 }
 
 #page-wrapper {
 	width: 100%;
-	padding: 5px 15px;
+	padding: 10px 25px;
 }
 
-.portfolio-item {
-	margin-top: 15px;
-	margin-bottom: 15px;
+/* Side Nav */
+
+#sidebar-wrapper {
+	margin-right: -250px;
+	right: 250px;
+	width: 250px;
+	float:right;
+	position: fixed;
+	height: 100%;
+	border-radius: 0;
+	border: none;
+	background-color: #073642;
+	overflow-y: auto;
+	z-index: 1000;
+	transition: all 0.4s;
+}
+
+.sidebar-nav {
+	position: absolute;
+	top: 0;
+	width: 250px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar-nav li {
+	font-size: 24px;
+}
+
+.sidebar-nav > .active > a,
+.sidebar-nav > .active > a:hover,
+.sidebar-nav > .active > a:focus {
+	color: #fdf6e3;
+	background-color: #002b36;
+}
+
+.sidebar-nav li a {
+	width: 250px;
+	color: #eee8d5;
+	display: block;
+	text-decoration: none;
+	padding: 15px;
+}
+
+.sidebar-nav li a img {
+	height: 3.6rem;
+}
+
+.sidebar-nav li a:hover, .sidebar-nav li a:focus {
+	background-color: #002b36;
+	text-decoration: none;
+}
+
+/* Bootstrap Default Overrides - Customized Dropdowns for the Side Nav */
+
+.sidebar-nav>li.dropdown>ul.dropdown-menu {
+	/*position: relative;*/
+	position: static;
+	float: none;
+	min-width: 250px;
+	margin: 0;
+	padding: 0;
+	background-color: #eee8d5;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.sidebar-nav>li.dropdown>ul.dropdown-menu>li {
+	font-size: 16px;
+}
+
+.sidebar-nav>li.dropdown>ul.dropdown-menu>li>a {
+	color: #073642;
+	padding-left: 25px;
+}
+
+.sidebar-nav>li.dropdown>ul.dropdown-menu>li>a:hover,
+.sidebar-nav>li.dropdown>ul.dropdown-menu>li>a.active,
+.sidebar-nav>li.dropdown>ul.dropdown-menu>li>a:focus {
+	background-color: #fdf6e3;
+	color: #002b36;
+}
+
+.dropdown-menu .divider {
+	background-color: #073642;
 }
 
 /* Nav Messages */
 
-.messages-dropdown .dropdown-menu .message-preview .avatar,
-.messages-dropdown .dropdown-menu .message-preview .name,
-.messages-dropdown .dropdown-menu .message-preview .message,
-.messages-dropdown .dropdown-menu .message-preview .time {
-	display: block;
+.dropdown-menu {
+	min-width: 300px;
 }
 
-.messages-dropdown .dropdown-menu .message-preview .avatar {
-	float: left;
-	margin-right: 15px;
+.dropdown-menu li a {
+	white-space: normal;
 }
 
-.messages-dropdown .dropdown-menu .message-preview .name {
-	font-weight: bold;
+.dropdown-toggle {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
-.messages-dropdown .dropdown-menu .message-preview .message {
-	font-size: 12px;
-}
+/* The Menu Opener Thingy */
 
-.messages-dropdown .dropdown-menu .message-preview .time {
-	font-size: 12px;
-}
-
-
-/* Nav Announcements */
-
-.announcement-heading {
-	font-size: 50px;
-	margin: 0;
-}
-
-.announcement-text {
-	margin: 0;
-}
-
-
-.side-nav>li {
+.menu-toggle {
 	font-size: 24px;
+	display: none;
 }
 
-.side-nav>li>a>img {
-	height: 3.6rem;
-}
+/* Defines how the menubar operates on smaller screens */
 
-/* Edit Below to Customize Widths > 768px */
-@media (min-width:768px) {
-
-	/* Wrappers */
+@media (max-width:767px) {
 
 	#wrapper {
-		padding-right: 225px;
+		padding-right: 0;
 	}
 
-	#page-wrapper {
-		padding: 15px 25px;
+	#sidebar-wrapper {
+		right: 0;
 	}
 
-	/* Side Nav */
-
-	.side-nav {
-		margin-right: -225px;
-		right: 225px;
-		width: 225px;
-		float:right;
-		position: fixed;
-		top: 50px;
-		height: 100%;
-		border-radius: 0;
-		border: none;
-		background-color: #222222;
-		overflow-y: auto;
-	}
-
-	/* Bootstrap Default Overrides - Customized Dropdowns for the Side Nav */
-
-	.side-nav>li.dropdown>ul.dropdown-menu {
+	#wrapper.active {
 		position: relative;
-		min-width: 225px;
-		margin: 0;
-		padding: 0;
-		border: none;
-		border-radius: 0;
-		background-color: transparent;
-		box-shadow: none;
-		-webkit-box-shadow: none;
+		right: 250px;
 	}
 
-	.side-nav>li.dropdown>ul.dropdown-menu>li>a {
-		color: #999999;
-		padding: 15px 15px 15px 25px;
+	#wrapper.active #sidebar-wrapper {
+		right: 250px;
+		width: 250px;
+		transition: all 0.4s;
 	}
 
-	.side-nav>li.dropdown>ul.dropdown-menu>li>a:hover,
-	.side-nav>li.dropdown>ul.dropdown-menu>li>a.active,
-	.side-nav>li.dropdown>ul.dropdown-menu>li>a:focus {
-		color: #fff;
-		background-color: #080808;
-	}
-
-	.side-nav>li>a {
-		width: 225px;
-	}
-
-	.navbar-inverse .navbar-nav>li>a:hover,
-	.navbar-inverse .navbar-nav>li>a:focus {
-		background-color: #080808;
-	}
-
-	/* Nav Messages */
-
-	.messages-dropdown .dropdown-menu {
-		min-width: 300px;
-	}
-
-	.messages-dropdown .dropdown-menu li a {
-		white-space: normal;
+	.menu-toggle {
+		display: inline;
 	}
 }
-
-
 
 /** ISOTOPE TILE STUFF **/
 

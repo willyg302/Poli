@@ -15,50 +15,19 @@
 
 <body>
 	<div id="wrapper">
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="Poli.html">Poli</a>
-			</div>
-			<div class="collapse navbar-collapse navbar-ex1-collapse">
-				{{> sidebar}}
-				{{> topbar}}
-			</div>
-		</nav>
+		<div id="sidebar-wrapper">
+			{{> sidebar}}
+		</div>
 		<div id="page-wrapper">
 			{{> page}}
 		</div>
 	</div>
 </body>
 
-
 <template name="sidebar">
-	<ul class="nav navbar-nav side-nav">
-		<li class="active"><a href="index.html"><img src="/img/home.svg"></span> Home</a></li>
-		<li><a href="#"><img src="/img/search.svg"> Search</a></li>
-		<li><a href="#"><img src="/img/my-elections.svg"> My Elections</a></li>
-		<li><a href="#"><img src="/img/mock-vote.svg"> Mock Vote</a></li>
-		<li><a href="#"><img src="/img/compare.svg"> Compare</a></li>
-		<li><a href="#"><img src="/img/stats.svg"> Stats</a></li>
-		<li><a href="#"><img src="/img/whos-who.svg"> Who's Who</a></li>
-	</ul>
-</template>
-
-<template name="topbar">
-	<ul class="nav navbar-nav navbar-user">
-		<form class="navbar-form navbar-left" role="search">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
-			<button type="submit" class="btn btn-default">Go &rarr;</button>
-		</form>
-		<li class="dropdown user-dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> John Smith <b class="caret"></b></a>
+	<ul class="sidebar-nav">
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/img/logo.svg"> John Smith</a>
 			<ul class="dropdown-menu">
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
 				<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
@@ -66,14 +35,21 @@
 				<li><a href="#"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>
 			</ul>
 		</li>
+		<li class="active"><a href="index.html"><img src="/img/home.svg"></span> Home</a></li>
+		<li><a href="#"><img src="/img/search.svg"> Search</a></li>
+		<li><a href="#"><img src="/img/by-location.svg"> By Location</a></li>
+		<li><a href="#"><img src="/img/mock-vote.svg"> Mock Vote</a></li>
+		<li><a href="#"><img src="/img/compare.svg"> Compare</a></li>
+		<li><a href="#"><img src="/img/stats.svg"> Stats</a></li>
+		<li><a href="#"><img src="/img/whos-who.svg"> Who's Who</a></li>
 	</ul>
 </template>
-
 
 <template name="page">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1><img src="/img/{{icon}}.svg" height="48"> {{title}}
+			<a href="#" class="menu-toggle pull-right"><span class="glyphicon glyphicon-expand"></span></a>
+			<h1 style="margin-left:5px;"><img src="/img/{{icon}}.svg" height="48"> {{title}}
 				<div class="option-set btn-group" data-option-key="filter">
 					<a href="#filter" data-option-value="*" class="btn btn-default active">All</a>
 					<a href="#filter" data-option-value=".bookmarked" class="btn btn-default">Bookmarked</a>
