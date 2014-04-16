@@ -94,3 +94,13 @@ Template.page.rendered = function () {
 		});
 	});
 };
+
+UI.registerHelper('tileComp', function() {
+	var type = this.valueOf();
+	switch (type) {
+		case 'facebook': return Template.fbtile;
+		case 'youtube': return Template.yttile;
+		case 'twitter': return Template.twtile;
+		default: return Template.dftile;
+	}
+});

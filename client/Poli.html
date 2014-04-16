@@ -27,7 +27,7 @@
 				<li><a href="#"><span class="glyphicon glyphicon-off"></span> Log Out</a></li>
 			</ul>
 		</li>
-		<li class="active"><a href="index.html"><img src="/img/home.svg"></span> Home</a></li>
+		<li class="active"><a href="index.html"><img src="/img/home.svg"> Home</a></li>
 		<li><a href="#"><img src="/img/search.svg"> Search</a></li>
 		<li><a href="#"><img src="/img/by-location.svg"> By Location</a></li>
 		<li><a href="#"><img src="/img/mock-vote.svg"> Mock Vote</a></li>
@@ -59,18 +59,9 @@
 <template name="tile">
 	<div class="tile{{#if bookmarked}} bookmarked{{/if}}" style="background-image: url('{{#if data.img}}{{data.img}}{{else}}http://placehold.it/512/{{color type}}&text=+{{/if}}');">
 		<div class="bottombar"></div>
-		{{#if comp type '===' 'facebook'}}
-			{{> fbtile}}
-		{{/if}}
-		{{#if comp type '===' 'youtube'}}
-			{{> yttile}}
-		{{/if}}
-		{{#if comp type '===' 'twitter'}}
-			{{> twtile}}
-		{{/if}}
-		{{#if comp type '===' 'default'}}
-			{{> dftile}}
-		{{/if}}
+		{{#tileComp type}}
+			{{this}}
+		{{/tileComp}}
 		<span class="bookmark glyphicon glyphicon-star{{#unless bookmarked}}-empty{{/unless}}"></span>
 	</div>
 </template>
